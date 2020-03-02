@@ -1,4 +1,52 @@
 <!--index.wxml-->
-<view>
- 首页
+<view container>
+  <view class="search_box">
+    <view class="search_input">
+      <image mode="widthFix" src="../../images/search.png"></image>
+      <text class="serch_text">搜索</text>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="swiper_container" indicator-dots="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgb(255,255,255)">
+    <swiper-item wx:for="{{imagesData}}" wx:key="index">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 活动菜单 -->
+  <view class="activity">
+    <navigator wx:for="{{activity}}" wx:key="index">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+
+  </view>
+  <!-- 楼层容器 -->
+  <view class="content">
+    <view class="floor_container" wx:for="{{floor}}" wx:key="index">
+      <view class="titlePic">
+        <image src="{{item.floor_title.image_src}}"></image>
+      </view>
+      <!-- 楼层 -->
+      <view class="floor">
+        <!-- 左侧 -->
+        <view class="leftPic">
+          <image src="{{item.product_list[0].image_src}}"></image>
+
+        </view>
+        <!-- 右侧 -->
+        <view class="rightPic">
+          <block 
+          wx:for="{{item.product_list}}" 
+          wx:for-index="proIndex" 
+          wx:for-item="proItem" 
+          wx:key="proIndex">
+            <image src="{{proItem.image_src}}" wx:if="{{proIndex !== 0}}"></image>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="backTop" wx:if="{{!isTop}}">
+      <text bindtap="backTop">顶部</text>
+    </view>
+  </view>
+
 </view>

@@ -1,0 +1,123 @@
+.search_box {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #ff2d4a;
+  padding: 20rpx;
+}
+
+.search_input {
+  width: 722rpx;
+  height: 60rpx;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.search_box image {
+  width: 32rpx;
+}
+
+/* 搜索 */
+
+.serch_text {
+  color: #ccc;
+  margin-left: 10px;
+}
+
+/* 輪播圖 */
+
+.swiper_container {
+  height: 340rpx;
+  width: 100%;
+}
+
+/* 活动图标 */
+
+.activity {
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 194rpx;
+  align-items: center;
+}
+
+.activity navigator {
+  display: block;
+}
+
+.activity image {
+  width: 120rpx;
+}
+
+/* 楼层 */
+
+.floor_container {
+  padding: 20rpx 16rpx;
+}
+
+.floor {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 左侧 */
+
+
+.leftPic image {
+  width: 232rpx;
+  height: 366rpx;
+}
+/* 右侧 */
+.rightPic {
+  display: flex;
+  justify-content: space-between;
+  width: 466rpx;
+  flex-wrap: wrap;
+}
+.rightPic image{
+  width: 228rpx;
+  height: 178rpx;
+}
+/* 头部楼层 */
+.titlePic image{
+  width: 750rpx;
+  height: 88rpx;
+  margin-bottom: 20rpx;
+}
+.floor_container:not(:nth-of-type(1)) .rightPic image:nth-of-type(3n+1){
+  width: 268rpx;
+}
+.floor_container:not(:nth-of-type(1)) .rightPic image:not(:nth-of-type(3n+1)){
+  width: 190rpx;
+}
+/* 回到顶部 */
+.backTop{
+  position: fixed;
+  right: 40rpx;
+  bottom:20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: #eee;
+  text-align: center;
+  line-height: 100rpx;
+  vertical-align: middle;
+}
+.backTop text{
+  position: relative;
+  top:4px;
+  font-size: 14px;
+}
+.backTop::before{
+  position: absolute;
+  left: 13px;
+  top:6px;
+  content: "";
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+  border-left:1px solid #000;
+  border-top:1px solid #000;
+  transform: rotateZ(45deg);
+
+}

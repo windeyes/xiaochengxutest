@@ -1,11 +1,9 @@
 
 
-
-
 let request = (config={})=>{
   let {url} = config
-  if (!(/$https:/.test(url))){
-    url = request.defaults.baseURL + url
+  if (!(/^https:/.test(url))){   
+    config.url = request.defaults.baseURL + url
   }
   return new Promise((result,reject)=>{
     wx.request({
@@ -13,7 +11,7 @@ let request = (config={})=>{
       success(res){
         result(res)
       },
-      fail: function(res) {
+      fail(res) {
         reject(res)
       },
       complete(res){
@@ -23,7 +21,7 @@ let request = (config={})=>{
   })
 }
 // 用于设置基准路劲
-request.defautls={
+request.defaults={
   baseURL:''
 }
 request.err = ()=>{}
