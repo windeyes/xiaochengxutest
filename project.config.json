@@ -50,9 +50,9 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/goodlist/goodlist",
-					"pathName": "pages/goodlist/goodlist",
-					"query": "keywords=\"曲面电视\"",
+					"name": "pages/category/index",
+					"pathName": "pages/category/index",
+					"query": "keywords=曲面电视",
 					"scene": null
 				}
 			]

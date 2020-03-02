@@ -24,13 +24,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let {
-      keywords
-    } = options
+    // 设置keywords
+    let {keywords} = options
     this.setData({
-      keywords:keywords
+      keywords
     })
-    // console.log(this.data.keywords)
     this.getGoodList()
   },
   // 获取商品列表
@@ -38,11 +36,12 @@ Page({
     if(this.data.isloading) return
     this.data.isloading = true
     setTimeout(() => {
+      // 请求数据
       request({
         url: '/api/public/v1/goods/search',
         data: {
           // 有个bug在这里
-          query: '曲面电视',
+          query: this.data.keywords,
           pagenum: this.data.pagenum,
           pagesize: 8,
         }
@@ -52,7 +51,7 @@ Page({
           totalNum:res.data.message.total
         })
         this.data.isloading = false;
-        console.log(res.data.message)
+        // console.log(res.data.message)
       })
     }, 1000)
   },

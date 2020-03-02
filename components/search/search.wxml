@@ -1,7 +1,7 @@
 <!--components/search/search.wxml-->
-<view class="search_box">
-    <view class="search_input">
+<view class="search_box" style="background:{{bgc}};text-align:{{t_align}}">
+    <view class="search_input" >
       <image mode="widthFix" src="../../images/search.png"></image>
-      <text class="serch_text">搜索</text>
+      <text class="serch_text" style="color:{{text_color}}">{{searchText}}</text>
     </view>
   </view>

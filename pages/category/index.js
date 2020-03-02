@@ -24,7 +24,7 @@ Page({
     request({
       url:'/api/public/v1/categories'
     }).then(res=>{
-      console.log(res)
+      // console.log(res)
       this.setData({
         catData:res.data.message
       })
