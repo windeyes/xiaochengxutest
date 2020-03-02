@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/category/index",
     "pages/shoppingCar/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/goodlist/goodlist"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -13,14 +14,14 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color":"#545454",
-    "selectedColor":"#ff2d4a",
+    "color": "#545454",
+    "selectedColor": "#ff2d4a",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "./images/icon_home@3x.png",
-        "selectedIconPath":"./images/icon_home_active@3x.png"
+        "selectedIconPath": "./images/icon_home_active@3x.png"
       },
       {
         "pagePath": "pages/category/index",
@@ -40,8 +41,6 @@
         "iconPath": "./images/icon_me@3x.png",
         "selectedIconPath": "./images/icon_me_active@3x.png"
       }
-
-      
     ]
   },
   "style": "v2",

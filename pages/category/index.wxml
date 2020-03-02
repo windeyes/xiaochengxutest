@@ -1,4 +1,54 @@
 <!--pages/category/index.wxml-->
 <view>
+  <search/>
+  <!-- 页面主体 -->
+  <view class="contain">
+    <!-- 左侧 -->
+    <view class="left_title">
+      <block wx:for="{{catData}}" wx:key="key">
+        <view
+         class="{{currentIndex === index?'active':''}}" 
+         bindtap="clickTitle" 
+         data-index="{{index}}">
+          {{item.cat_name}}
+        </view>
+      </block>
+    </view>
+
+    <!-- 右侧 -->
+    <view class="contain_main">
+      <view 
+      class="contain_item" 
+      wx:for="{{catData[currentIndex].children}}" 
+      wx:for-item="contain_item" 
+      wx:for-index="contain_index" 
+      wx:key="contain_index">
+        <!-- 标题 -->
+        <view class="contain_title">
+          /
+          <text>{{contain_item.cat_name}}</text>/
+        </view >
+
+        <!-- 内容 -->
+        <view class="contain_list">
+        <block 
+        wx:for="{{contain_item.children}}" 
+        wx:for-item="contain_second_item"  
+        wx:for-index="contain_second_index" 
+        wx:key="contain_second_index">
+          <navigator url="../goodlist/goodlist?keywords={{contain_second_item.cat_name}}">
+            <image 
+            mode="widthFix" 
+            src="{{contain_second_item.cat_icon}}">
+            </image>
+            <text>{{contain_second_item.cat_name}}</text>
+          </navigator>
+        </block>
+        </view>
+        
+      </view>
+
+    </view>
+  </view>
 
 </view>

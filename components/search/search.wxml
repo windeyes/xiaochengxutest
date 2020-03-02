@@ -1,0 +1,7 @@
+<!--components/search/search.wxml-->
+<view class="search_box">
+    <view class="search_input">
+      <image mode="widthFix" src="../../images/search.png"></image>
+      <text class="serch_text">搜索</text>
+    </view>
+  </view>

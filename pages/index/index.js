@@ -43,7 +43,6 @@ Page({
     wx.pageScrollTo({ scrollTop: 0 })
   },
   onPageScroll(scrollTop){
-    console.log(this.data)
     let itemdata = this.data.isTop;
     if(scrollTop.scrollTop >= 100){
       itemdata = false

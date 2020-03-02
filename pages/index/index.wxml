@@ -1,11 +1,6 @@
 <!--index.wxml-->
 <view container>
-  <view class="search_box">
-    <view class="search_input">
-      <image mode="widthFix" src="../../images/search.png"></image>
-      <text class="serch_text">搜索</text>
-    </view>
-  </view>
+  <search/>
   <!-- 轮播图 -->
   <swiper class="swiper_container" indicator-dots="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgb(255,255,255)">
     <swiper-item wx:for="{{imagesData}}" wx:key="index">

@@ -1,0 +1,28 @@
+<!--pages/goodlist/goodlist.wxml-->
+<view>
+  <search/>
+  <view class="title">
+    <view 
+    wx:for="{{['综合','销量','价格']}}"
+    wx:key="index"
+    class="{{currentIndex == index ? 'active':''}}"
+    data-index="{{index}}"
+    bindtap="clickTap">
+    {{item}}
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <navigator url="" class="goodslist" wx:for="{{goodListData}}" wx:key="index">
+    <image mode="aspectFill" src="{{item.goods_big_logo}}"></image>
+    <view class="text">
+      <view class="top">
+      {{item.goods_name}}
+      </view>
+      <text class="price">￥ <text class="price_text">{{item.goods_price}}</text> </text>
+    </view>
+  </navigator>
+  <view class="last_word">
+     <text wx:if="{{goodListData.length < totalNum}}">正在加载</text>
+     <text wx:else>结束</text>
+  </view>
+</view>

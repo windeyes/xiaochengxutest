@@ -1,1 +1,66 @@
 /* pages/category/index.wxss */
+.contain{
+  position: fixed;
+  top: 100rpx;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* 左侧 */
+.contain .left_title{
+  width: 200rpx;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  line-height: 102rpx;
+  flex-shrink: 0;
+}
+.left_title view{
+  background:#f5f5f5;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.left_title .active::before{
+  width: 4px;
+  height: 18px;
+  content:"";
+  display: block;
+  background: red;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left_title .active{
+  background:white;
+}
+/* 右侧 */
+.contain_main{
+  flex: 1;
+  padding:10px;
+  overflow: auto;
+}
+.contain_main .contain_title{
+  text-align: center;
+}
+/* 每一个类 */
+.contain_item{
+  width: 100%;
+}
+.contain_list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.contain_list navigator{
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.contain_list navigator image{
+  width: 120rpx;
+} 
