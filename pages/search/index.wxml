@@ -1,0 +1,39 @@
+<!--pages/search/index.wxml-->
+<!-- 搜索 -->
+<view class="search">
+  <view class="search_box">
+    <icon type="search"></icon>
+    <input 
+    type="text" 
+    placeholder="输入你想要的商品" 
+    bindinput="userInput"
+    bindconfirm="enterDown"
+    value="{{dataInput}}"
+    ></input>
+  </view>
+  <!-- 取消 -->
+  <view class="cancle" bindtap="cancle">取消</view>
+</view>
+<!-- 历史记录 -->
+<view class="history_box">
+  <view class="history_title">
+    <view>历史搜索</view>
+    <icon type="clear" size="18"></icon>
+  </view>
+  <!-- 搜搜历史 -->
+  <view class="history_content">
+    <view  wx:for="{{historyData}}" wx:key="{{index}}">{{item}}</view>
+
+  </view>
+  <!-- 提示 -->
+  <view class="tap" wx:if="{{showTap}}">
+    <navigator 
+     data-myId="{{item.id}}" 
+     bindtap="clickit" 
+     wx:for="{{searchResult}}"
+     wx:key="index">
+      
+      {{item.goods_name}}
+    </navigator>
+  </view>
+</view>

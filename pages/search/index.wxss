@@ -1,0 +1,82 @@
+/* pages/search/index.wxss */
+.search{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 116rpx;
+  align-items: center;
+  background:#efefef;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+.search_box{
+  display: flex;
+  justify-content: space-between;
+  width: 98vw;
+  height: 62rpx;
+  background: white;
+  padding:0 10px;
+  box-sizing:border-box;
+  flex:1;
+  align-items: center;
+}
+.search_box icon{
+  display: block;
+}
+.search_box input{
+  flex:1;
+  font-size: 12px;
+}
+/* 取消 */
+.cancle{
+  width: 160rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  margin-left: 20rpx;
+  border:1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+.history_title{
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  align-items: center;
+  font-size: 14px;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+
+.history_content{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+.history_content view{
+  padding:10px;
+  background: #ccc;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+/* 提示 */
+.tap{
+  position: absolute;
+  top:116rpx;
+  width: 100vw;
+  background: white;
+  height: calc(100vh - 162rpx);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.tap navigator{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  height: 30px;
+  line-height: 30px;
+}
+.tap navigator:nth-child(2n){
+  background: #efefef;
+}

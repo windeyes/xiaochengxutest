@@ -7,6 +7,10 @@ Page({
     this.setData({
       currentIndex: index
     })
+    const query = wx.createSelectorQuery()
+    let bb = query.select(".contain_main")
+    bb.scrollTop
+    // console.log(bb)
    
   },
   /**

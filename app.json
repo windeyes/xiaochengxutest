@@ -4,7 +4,9 @@
     "pages/category/index",
     "pages/shoppingCar/index",
     "pages/my/index",
-    "pages/goodlist/goodlist"
+    "pages/goodlist/goodlist",
+    "pages/search/index",
+    "pages/goodsdetail/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
