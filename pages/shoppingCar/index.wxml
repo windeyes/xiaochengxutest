@@ -1,2 +1,70 @@
 <!--pages/shoppingCar/index.wxml-->
-<text>pages/shoppingCar/index.wxml</text>
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="uesr_msg">
+    <view class="uesr_msg_up">
+      <view>收货人：
+        <text>里</text>
+      </view>
+      <view class="tel">13812333194</view>
+    </view>
+    <view class="user_msg_down">
+      收货地址：撒贷款利率放假啦空手道就
+    </view>
+    <image src="../../images/cart_border@2x.png"></image>
+  </view>
+
+  <!-- 商品详情 -->
+  <view class="goods">
+    <view class="shop_title">
+      <view class="iconfont icon-icon3"></view>
+      <view class="shop_title_text">我的生活馆</view>
+    </view>
+    <view class="shop_content" wx:for="{{shoppingCarData}}" wx:key="index">
+      <view class="shop_content_left">
+        <icon type="success" color="red"></icon>
+      </view>
+      <view class="shop_content_right">
+        <image mode="aspectFill" src="{{item.logo}}"></image>
+        <view class="shop_text">
+          <view class="shop_up">{{item.title}}</view>
+          <view class="shop_down">
+            <view class="count_btn" bindtap="conutClick" data-index="{{index}}" data-count="-1">-</view>
+            <input 
+            class="show_count" 
+            bindblur="handlerShowText" 
+            focus="{{isfocus}}"
+            wx:if="{{!showCountText}}" 
+            value="{{item.count}}"></input>
+
+            <text 
+            class="show_count" 
+            wx:if="{{showCountText}}"
+            bindtap="handlerShowInput">{{item.count}}</text>
+
+            <view class="count_btn" bindtap="conutClick" data-index="{{index}}" data-count="1">+</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <!-- 结算 -->
+  <view class="count_price">
+    <view class="count_price_lec">
+      <icon type="success" color="red"></icon>
+      <text>全选</text>
+    </view>
+    <view class="count_price__right">
+      <view class="price_text">
+        <view>
+          <text>合计：</text>
+          <text class="price">￥14110.00</text>
+        </view>
+        <view>包含运费</view>
+      </view>
+      <view class="price_btn">结算</view>
+    </view>
+  </view>
+</view>

@@ -46,12 +46,13 @@ Page({
           pagesize: 8,
         }
       }).then(res => {
+
         this.setData({
           goodListData: [...this.data.goodListData,...res.data.message.goods],
           totalNum:res.data.message.total
         })
         this.data.isloading = false;
-        // console.log(res.data.message)
+        console.log(res.data.message)
       })
     }, 1000)
   },

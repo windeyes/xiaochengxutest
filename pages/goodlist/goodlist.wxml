@@ -12,7 +12,7 @@
     </view>
   </view>
   <!-- 商品列表 -->
-  <navigator url="" class="goodslist" wx:for="{{goodListData}}" wx:key="index">
+  <navigator url="../goodsdetail/index?goods_id={{item.goods_id}}" class="goodslist" wx:for="{{goodListData}}" wx:key="index">
     <image mode="aspectFill" src="{{item.goods_big_logo}}"></image>
     <view class="text">
       <view class="top">

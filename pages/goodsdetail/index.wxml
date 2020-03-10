@@ -1,20 +1,19 @@
 <!--pages/goodsdetail/index.wxml-->
-<view class="container">
+<view class="container" >
   <!-- 轮播图 -->
-  <swiper>
-    <swiper-item>
-      <image mode="aspectFill" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4054658919,2603023798&fm=26&gp=0.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4054658919,2603023798&fm=26&gp=0.jpg"></image>
+  <swiper indicator-dots autoplay circular>
+    <swiper-item
+     wx:for="{{goods_data.pics}}" 
+     wx:key="index">
+      <image mode="aspectFill" src="{{item.pics_big}}"></image>
     </swiper-item>
   </swiper>
   <!-- 详情信息 -->
   <view class="goods_detail">
-    <view class="price">￥279</view>
+    <view class="price">￥{{goods_data.goods_price}}</view>
     <view class="goods_des">
       <view class="goods_dex_detail">
-        是否跳过未显示的滑块布局，设为 true 可优化复杂情况下的滑动性能，但会丢失隐藏状态滑块的布局信息
+      {{goods_data.goods_name}}
       </view>
       <view class="collect">
         <view class="iconfont icon-icon3"></view>
@@ -36,7 +35,7 @@
       <view class="iconfont icon-icon3"></view>
       <view>购物车</view>
     </view>
-    <view class="big_btn">
+    <view class="big_btn" bindtap="addCar">
       <view>加入购物车</view>
     </view>
     <view  class="big_btn">
