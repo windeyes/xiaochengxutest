@@ -1,0 +1,4 @@
+<!--pages/authorize/index.wxml-->
+<view>
+  <button type="primary" open-type="getUserInfo"bindgetuserinfo="getUserInfo">授权</button>
+</view>

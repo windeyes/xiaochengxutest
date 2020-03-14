@@ -26,16 +26,22 @@
       <view class="shop_title_text">我的生活馆</view>
     </view>
     <!-- 内容 -->
-    <block wx:for="{{shoppingCarData}}" wx:key="index">
-      <shopItem bindcheckGoods="ClickAllChoice" shoppingItem="{{item}}" binddelItem="del" ShopIndex="{{index}}" />
-    </block>
+    <view class="order_content" wx:for="{{shoppingCarData}}" wx:key="index">
+
+      <shopItem 
+      isInCar="{{false}}" 
+      bindcheckGoods="ClickAllChoice" 
+      shoppingItem="{{item}}" 
+      binddelItem="del" 
+      ShopIndex="{{index}}" 
+      isfilter="{{item.isSelect}}"/>
+    </view>
   </view>
 
   <!-- 结算 -->
   <view class="count_price">
     <view class="count_price_lec">
-      <icon type="success" bindtap="clickAll" color="{{choiceAll?'red':'gray'}}"></icon>
-      <text >全选</text>
+      
     </view>
     <view class="count_price__right">
       <view class="price_text">
@@ -45,7 +51,11 @@
         </view>
         <view>包含运费</view>
       </view>
-      <view bindtap="userPay" class="price_btn">结算</view>
+      <view class="price_btn">
+      
+  <view class="payment-button"   size ="mini" bindtap="payment">支付 </view>
+
+      </view>
     </view>
   </view>
 

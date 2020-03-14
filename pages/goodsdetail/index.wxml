@@ -32,7 +32,7 @@
       <view>联系客服</view>
     </view>
     <view class="small_btn">
-      <view class="iconfont icon-icon3"></view>
+      <view class="iconfont icon-icon3" bindtap="goCar"></view>
       <view>购物车</view>
     </view>
     <view class="big_btn" bindtap="addCar">

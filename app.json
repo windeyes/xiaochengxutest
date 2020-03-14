@@ -6,7 +6,9 @@
     "pages/my/index",
     "pages/goodlist/goodlist",
     "pages/search/index",
-    "pages/goodsdetail/index"
+    "pages/goodsdetail/index",
+    "pages/orderconfirm/index",
+    "pages/authorize/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

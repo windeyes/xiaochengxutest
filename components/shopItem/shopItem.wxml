@@ -1,0 +1,33 @@
+<!--components/shopItem/shopItem.wxml-->
+ <view class="shop_content" wx:if="{{isfilter}}">
+      <view class="shop_content_left" bindtap="checkGoods" wx:if="{{isInCar}}">
+        <icon type="success"  color="{{shoppingItem.isSelect?'red':'gray'}}"></icon>
+      </view>
+      <view class="shop_content_right">
+        <image mode="aspectFill" src="{{shoppingItem.logo}}"></image>
+        <view class="shop_text">
+          <view class="shop_up">{{shoppingItem.title}}</view>
+          <view class="shop_down">
+            <view class="shopping_price">
+              ￥{{shoppingItem.price}}
+            </view>
+           <view class="shoppping_count">
+            <view class="count_btn" bindtap="conutClick" wx:if="{{isInCar}}" data-count="-1">-</view>
+            <input 
+            class="show_count" 
+            bindblur="handlerShowText" 
+            focus="{{isfocus}}"
+            wx:if="{{!showCountText}}" 
+            value="{{shoppingItem.count}}"></input>
+
+            <text 
+            class="show_count" 
+            wx:if="{{showCountText}}"
+            bindtap="handlerShowInput">{{shoppingItem.count}}</text>
+
+            <view class="count_btn" bindtap="conutClick" wx:if="{{isInCar}}"  data-count="1">+</view></view>
+          </view>
+        </view>
+
+      </view>
+    </view>

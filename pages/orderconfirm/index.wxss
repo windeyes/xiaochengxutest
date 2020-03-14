@@ -1,4 +1,4 @@
-/* pages/shoppingCar/index.wxss */
+/* pages/orderconfirm/index.wxss */
 
 .container {
   background: #f4f4f4;
@@ -122,4 +122,14 @@
   text-align: center;
   line-height: 100rpx;
   z-index:999;
+}
+.order_content{
+  padding:0 20rpx
+}
+.payment-button{
+  background: red;
+  line-height: 100rpx;
+  text-align: center;
+  color:white;
+  font-weight: normal;
 }

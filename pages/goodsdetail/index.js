@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     let { goods_id } = options
-    console.log(goods_id)
+    // console.log(goods_id)
     request({
       url:'/api/public/v1/goods/detail',
       data:{
@@ -46,7 +46,8 @@ Page({
         logo: this.data.myarr.goods_big_logo,
         title: this.data.myarr.goods_name,
         price: this.data.myarr.goods_price,
-        count: 1
+        count: 1,
+        isSelect:false
       }
       shopping_car.unshift(shopping_car_item)
       wx.setStorageSync('shopping_car', shopping_car)
@@ -58,6 +59,12 @@ Page({
       wx.showToast({ title: '商品数量已加一' })
     }
     
+  },
+  // 跳转至购物车
+  goCar(){
+    wx.switchTab({
+      url:'../shoppingCar/index'
+    })
   }
 
 })

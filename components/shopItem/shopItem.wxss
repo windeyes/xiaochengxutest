@@ -1,0 +1,74 @@
+/* components/shopItem/shopItem.wxss */
+.shop_content {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.shop_content_left {
+  width: 86rpx;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.shop_content_right {
+  display: flex;
+  align-items: center;
+  flex:1;
+}
+
+.shop_content_right image {
+  width: 162rpx;
+  flex-shrink: 0;
+  height: 162rpx;
+}
+
+.shop_text {
+  flex:1;
+  height: 162rpx;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shop_text  .shop_up {
+  -webkit-line-clamp: 2; /*控制显示的行数*/
+  display: -webkit-box; /*必要属性*/
+  -webkit-box-orient: vertical; /*控制其中内容的排列方式*/
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.shop_text .shop_down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shop_text .shop_down .shoppping_count{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shopping_price{
+  color:red;
+}
+.shop_text .shop_down .show_count {
+
+  width: 40px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  display: block;
+}
+
+.shop_down .count_btn {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 40rpx;
+}
